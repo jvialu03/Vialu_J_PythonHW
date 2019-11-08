@@ -1,4 +1,4 @@
-from random import ranint
+from random import randint
 # Define a python function that takes an argument
 def winorlose(status):
 	print("called win or lose")
