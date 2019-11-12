@@ -1,4 +1,5 @@
 from random import randint
+from gameFunctions import gameVars
 # Define a python function that takes an argument
 def winorlose(status):
 	print("called win or lose")
@@ -6,14 +7,14 @@ def winorlose(status):
 
 	print("You", status, "! Would you like to play again?")
 
-	choice = input("Y / N")
-	print(choice)
+	gameVars.choice = input("Y / N")
+	print(gameVars.choice)
 
-	if (choice is "N") or (choice is "n"):
+	if (gameVars.choice is "N") or (gameVars.choice is "n"):
 		print("You chose to quit")
 		exit()
 
-	elif (choice is "Y") or (choice is "y"):
+	elif (gameVars.choice is "Y") or (gameVars.choice is "y"):
 		# reset the game so that we can start all over again
 		global player_lives
 		global computer_lives
@@ -21,7 +22,8 @@ def winorlose(status):
 		global computer
 		global choices
 
-		player_lives = 5
-		computer_lives = 5
-		player = False
-		computer = choices[randint(0, 2)]
+		gameVars.player_lives = 1
+		gameVars.computer_lives = 1
+		gameVars.total_lives = 1
+		gameVars.player = False
+		gameVars.computer = gameVars.choices[randint(0, 2)]
