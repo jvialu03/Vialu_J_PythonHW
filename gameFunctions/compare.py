@@ -23,7 +23,7 @@ def comparechoices(playerChoice, AIchoice):
 			gameVars.computer_lives = gameVars.computer_lives - 1
 
 	elif playerChoice == "scissors":
-		if A == "rock":
+		if AIchoice == "rock":
 			print("*You lose!", AIchoice, "smashes", playerChoice,"*" "\n")
 			gameVars.player_lives = gameVars.player_lives - 1
 		else:
