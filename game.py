@@ -17,20 +17,24 @@ gameVars.player = False
 
 while gameVars.player is False:
 	# set gameVars.player to true
-	print("*****************\n")
+	print("***************************\n")
 	print("Computer lives: ", gameVars.computer_lives, "/5\n")
 	print("Player lives: ", gameVars.player_lives, "/5\n")
 	print("Choose your weapon!\n")
-	print("*****************\n")
+	print("***************************\n")
 
 	gameVars.player = input("choose rock, paper or scissors: ")
 	gameVars.player = gameVars.player.lower()
+	print("---------------------------")
 
 	print("computer chose", gameVars.computer, "\n")
-	print("player chose", gameVars.player, "\n")
+	print("player chose", gameVars.player)
+	print("---------------------------\n")
 
+	if gameVars.player.lower() == "quit":
+			exit()
 	### this is where you would call compare
-	
+	print(compare.comparechoices(gameVars.player, gameVars.computer))
 	### end compare stuff
 
 	# handle all lives lost for gameVars.player or AI
